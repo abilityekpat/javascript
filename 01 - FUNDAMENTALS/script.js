@@ -80,11 +80,56 @@ console.log(ageJonas >= 30);
 const age = 15;
 if(age >=18){
 console.log("Sarah can have a driving License")
-}else{
+} else {
     const ageLeft = 18 - age;
     console.log(`Sarah is too young to drivr, wait for another ${ageLeft} years`)
 
 }
+
+const birthYear = 2012;
+let century;
+if (birthYear <= 2000){
+     century = 20;
+}
+else{
+    century = 21;
+}
+console.log(century);
+
+//Type conversion
+const year = '1999';
+console.log(Number(year), year)
+
+console.log(year);
+
+const newAge = 12
+
+
+//Equality opearators
+
+const ageLenght = '18';
+if(Number(ageLenght) === 18){
+    console.log(
+        "You are now becoming an adult"
+    )
+} else{
+    console.log(
+        "You are still a child"
+    )
+}
+
+const favourite = Number(prompt("What is your favourite number"))
+console.log(favourite);
+console.log(typeof favourite);
+
+//Logical operators
+const hasDriversLicense = true; // A
+const hasGoodVision = true; // B
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
 
 
 
