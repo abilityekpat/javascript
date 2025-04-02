@@ -107,28 +107,70 @@ const newAge = 12
 
 //Equality opearators
 
-const ageLenght = '18';
-if(Number(ageLenght) === 18){
-    console.log(
-        "You are now becoming an adult"
-    )
-} else{
-    console.log(
-        "You are still a child"
-    )
-}
+// const ageLenght = '18';
+// if(Number(ageLenght) === 18){
+//     console.log(
+//         "You are now becoming an adult"
+//     )
+// } else{
+//     console.log(
+//         "You are still a child"
+//     )
+// }
 
-const favourite = Number(prompt("What is your favourite number"))
-console.log(favourite);
-console.log(typeof favourite);
+// const favourite = Number(prompt("What is your favourite number"))
+// console.log(favourite);
+// console.log(typeof favourite);
 
 //Logical operators
+// const hasDriversLicense = true; // A
+// const hasGoodVision = true; // B
+
+// console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasDriversLicense || hasGoodVision);
+// console.log(!hasDriversLicense);
+
+
 const hasDriversLicense = true; // A
 const hasGoodVision = true; // B
-
 console.log(hasDriversLicense && hasGoodVision);
 console.log(hasDriversLicense || hasGoodVision);
 console.log(!hasDriversLicense);
+console.log(!hasGoodVision)
+
+
+const scoreDolphins = (88 + 91 + 89) / 3;
+const scoreKoalas = (97 + 112 + 101) / 3;
+console.log(scoreDolphins, scoreKoalas)
+
+if (scoreDolphins > scoreKoalas && scoreDolphins >=1000){
+    console.log("Dolphins has win the game");
+}else if (scoreKoalas > scoreDolphins && scoreKoalas >=1000){
+    console.log("Koalas has won the game")
+}else if(scoreDolphins === scoreKoalas){
+    console.log("They both won the game")
+}else{
+    console.log("There was no winner in the show")
+}
+
+
+//Switch
+
+const day = "Thursday"
+switch(day){
+    case "Monday":
+        console.log('Go to the dhow to get food items');
+    break;
+    case "Tuesday":
+        console.log("Go to the gym");
+    break;
+    case "Wednesday":
+    case "Thursday":
+        console.log("Going to the mall");
+    break;
+    default:
+        console.log("Not a valid day")
+}
 
 
 
