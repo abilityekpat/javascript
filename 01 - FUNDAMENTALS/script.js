@@ -77,32 +77,32 @@ console.log(x)
 console.log(ageJonas > ageSarah);
 console.log(ageJonas >= 30);
 
-const age = 15;
-if(age >=18){
-console.log("Sarah can have a driving License")
-} else {
-    const ageLeft = 18 - age;
-    console.log(`Sarah is too young to drivr, wait for another ${ageLeft} years`)
+// const age = 15;
+// if(age >=18){
+// console.log("Sarah can have a driving License")
+// } else {
+//     const ageLeft = 18 - age;
+//     console.log(`Sarah is too young to drivr, wait for another ${ageLeft} years`)
 
-}
+// }
 
-const birthYear = 2012;
-let century;
-if (birthYear <= 2000){
-     century = 20;
-}
-else{
-    century = 21;
-}
-console.log(century);
+// const birthYear = 2012;
+// let century;
+// if (birthYear <= 2000){
+//      century = 20;
+// }
+// else{
+//     century = 21;
+// }
+// console.log(century);
 
-//Type conversion
-const year = '1999';
-console.log(Number(year), year)
+// //Type conversion
+// const year = '1999';
+// console.log(Number(year), year)
 
-console.log(year);
+// console.log(year);
 
-const newAge = 12
+// const newAge = 12
 
 
 //Equality opearators
@@ -172,8 +172,114 @@ switch(day){
         console.log("Not a valid day")
 }
 
+const dayActivity = "Friday";
+if (dayActivity === "Monday"){
+    console.log("Go to the supermarket to get food items")
+} else if (dayActivity === "Tuesday"){
+    console.log("Going to the mall")
+} else {
+    console.log("No activity for today");
+}
+
+
+const age = 23;
+// age >=20 ? console.log("I am a big girl") : console.log("I am still a child");
+
+const esther = age >= 20 ? "water" : "wine";
+console.log(esther);
 
 
 
 
+
+// const age  = 18;
+// if (age < 17){
+//     console.log("wine");
+// }else{
+//     console.log("Water");
+// }
+
+// const age = 18;
+// let drink;
+// if (age >= 18){
+//     drink = "Wine"
+// }else{
+//     drink = "Water"
+// }
+
+// console.log(drink);
+
+
+
+//function declearation
+
+function fruit(){
+    console.log("I have 2 fruit");
+}
+
+fruit();
+
+function fruitProcessor(apple, orange){
+    const fruits = `i have ${apple} apple and ${orange} orange`
+    return fruits;
+}
+
+const result = fruitProcessor(4, 7);
+console.log(result);
+
+console.log(fruitProcessor(4,8));
+
+
+
+function food(light, heavy, moderate){
+    const foodType = `i like light food like ${light} for breakfast, will prefer heavy food like ${heavy} for lunch and will go with moderate food like ${moderate} for dinner`
+    return foodType;
+}
+
+const foodResult = food("tea and bread", "garri and soup", "rice and beans");
+console.log(foodResult);
+
+
+//Function Expression
+const birthYear = function(year){
+ const age = year - 1990;
+ return age;
+}
+console.log(birthYear(1999));
+
+const person = function(age, grade){
+  const name = age - birthYear(1999)
+  return name;
+}
+console.log(person(90, 80));
+
+
+//Arrow Function
+const birthyear = year => year - 1999;
+const results = birthYear(2000);
+console.log(results);
+
+const birthYears = (day, year, month) => {
+  const answer = `I was born on the ${day} day of ${month} in the year ${year}`
+  return answer;
+}
+console.log(birthYears(12,2024,4));
+
+//Array
+
+const friends = ["favour", "grace", "joy"];
+console.log(friends);
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+const addName = friends.push("Mary")
+console.log(addName);
+console.log(friends);
+
+friends.unshift("Grace");
+console.log(friends);
+console.log(friends.length);
+
+friends.pop();
+console.log(friends);
 
