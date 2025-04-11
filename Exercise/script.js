@@ -343,6 +343,115 @@ console.log(ascending);
 const descending = [...arrayOfNum].sort((a, b) => b - a);
 console.log(descending);
 
+/*
+ * Filter out even numbers from an array.
+ */
+const filterEvenNum = [2, 5, 1, 6, 3, 9, 7, 11, 14, 12, 16, 15, 17, 4, 19, 8];
+const oddNumber = [];
+const evenNumber = [];
+
+for (let num = 0; num <= filterEvenNum.length - 1; num++) {
+  if (num % 2 != 0) {
+    oddNumber.push(num);
+  } else if (num % 2 != 2) {
+    evenNumber.push(num);
+  }
+}
+
+console.log(oddNumber);
+console.log(evenNumber);
+
+/*
+ * Square every number in an array using map.
+ */
+
+const squareNumberArr = [2, 5, 1, 6, 3, 9, 7, 11, 14, 12, 16, 15, 17, 4, 19, 8];
+
+const result = squareNumberArr.map((num) => num * num);
+
+console.log(result);
+
+/*
+ * Count the number of times each value appears in an array
+ */
+
+const numberAppears = [
+  2, 5, 1, 6, 3, 3, 9, 7, 2, 11, 14, 12, 16, 10, 1, 6, 9, 2, 12, 8, 2, 7, 1, 3,
+  8, 15, 17, 4, 10, 19, 8,
+];
+
+const count = {};
+
+numberAppears.forEach((num) => {
+  count[num] = (count[num] || 0) + 1;
+});
+
+console.log(count);
+
+/*
+ * Remove duplicates from an array.
+ */
+const removeDuplicate = [
+  2, 5, 1, 6, 3, 3, 9, 7, 2, 11, 14, 12, 16, 10, 1, 6, 9, 2, 12, 8, 2, 7, 1, 3,
+  8, 15, 17, 4, 10, 19, 8,
+];
+const removeResult = [];
+for (let remove = 0; remove <= removeDuplicate.length - 1; remove++) {
+  if (!removeResult.includes(removeDuplicate[remove])) {
+    removeResult.push(removeDuplicate[remove]);
+  }
+}
+
+console.log(removeResult);
+
+/*
+ * Find the largest and smallest number in an array.
+ */
+
+const smallestAndLargest = [
+  2, 5, 1, 6, 3, 9, 7, 11, 14, 12, 16, 15, 17, 4, 19, 8,
+];
+let small = smallestAndLargest[0];
+let large = smallestAndLargest[0];
+
+for (number = 0; number < smallestAndLargest.length; number++) {
+  if (smallestAndLargest[number] < small) {
+    small = smallestAndLargest[number];
+  } else if (smallestAndLargest[number] > large) {
+    large = smallestAndLargest[number];
+  }
+}
+
+// for (let number = 1; number < smallestAndLargest.length; number++) {
+//   if (smallestAndLargest[number] < small) {
+//     small = smallestAndLargest[number];
+//   } else if (smallestAndLargest[number] > large) {
+//     large = smallestAndLargest[number];
+//   }
+// }
+
+console.log(small);
+console.log(large);
+
+/*
+ * Sum all elements in an array using reduce.
+ */
+const sumArrayNum = [2, 5, 1, 6, 3, 9, 7, 11, 14, 12, 16, 15, 17, 4, 19, 8];
+let sumResult = 0;
+
+for (let arrayNum = 0; arrayNum < sumArrayNum.length - 1; arrayNum++) {
+  sumResult = sumResult + sumArrayNum[arrayNum];
+}
+console.log(sumResult);
+
+/*
+ * Flatten a nested array (one level deep).
+ */
+
+const flatArray = [2, 3, [3, 5, 7], 5, 9, [1, 8, 3], 8];
+const flatResult = flatArray.flat();
+console.log(flatResult);
+
 /*✅ 30 JavaScript Array Exercises (from Beginner to Advanced)
 
 🟢 Beginner (1–10)
@@ -408,3 +517,5 @@ console.log(descending);
 
 30. Find the longest word in an array of strings.
 */
+
+[1, [2, 4], 6][1246];
