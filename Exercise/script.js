@@ -303,7 +303,7 @@ for (
 console.log(computerScienceStudent);
 console.log(mathematicsStudent);
 
-universityStudents.forEach(function (universityStudent) {
+universityStudents.forEach((universityStudent) => {
   if (universityStudent.department === "engineering") {
     engineeringStudent.push(universityStudent);
   }
@@ -367,9 +367,27 @@ console.log(evenNumber);
 
 const squareNumberArr = [2, 5, 1, 6, 3, 9, 7, 11, 14, 12, 16, 15, 17, 4, 19, 8];
 
-const result = squareNumberArr.map((num) => num * num);
+// const result = squareNumberArr.map((num) => num * num);
 
+const result = squareNumberArr.map(function (num) {
+  return num * num;
+});
 console.log(result);
+
+// let squareResult = [];
+// for (let squareNumberArray in squareNumberArr){
+//   let result = squareNumberArr[squareNumberArray] * squareNumberArr[squareNumberArray];
+//     squareResult.push(result);
+//   }
+// console.log(squareResult);
+
+// const squareNumberArr = [2, 5, 1, 6, 3, 9, 7, 11, 14, 12, 16, 15, 17, 4, 19, 8];
+// let squareResult = [];
+// squareNumberArr.forEach( (squareNumberArray) =>{
+//   let result = squareNumberArray * squareNumberArray;
+//       squareResult.push(result);
+// });
+// console.log(squareResult);
 
 /*
  * Count the number of times each value appears in an array
@@ -452,6 +470,47 @@ const flatArray = [2, 3, [3, 5, 7], 5, 9, [1, 8, 3], 8];
 const flatResult = flatArray.flat();
 console.log(flatResult);
 
+/*
+ * Find all elements greater than a given value.
+ */
+
+const numbers = [2, 5, 1, 6, 3, 9, 7, 11, 14, 12, 16, 15, 17, 4, 19, 8];
+const givenNumber = [4];
+const finalResult = [];
+
+// for(let number = 0; number < numbers.length; number++){
+//     if(numbers[number] > givenNumber){
+//         finalResult.push(numbers[number]);
+//     }
+// }
+// console.log(finalResult);
+
+for (let number in numbers) {
+  if (numbers[number] > givenNumber) {
+    finalResult.push(numbers[number]);
+  }
+}
+console.log(finalResult);
+
+/*
+ * Insert an element at a specific index.
+ */
+const arrayNumber = [2, 5, 1, 6, 3, 9, 7, 11, 14, 12, 16, 15, 17, 4, 19, 8];
+const numberToInsert = 50;
+
+arrayNumber.splice(4, 0, numberToInsert);
+console.log(arrayNumber);
+
+/*
+ * Replace a specific element in an array
+ */
+const replaceArrayNumber = [
+  2, 5, 1, 6, 3, 9, 7, 11, 14, 12, 16, 15, 17, 4, 19, 8,
+];
+const numberToReplace = 11;
+replaceArrayNumber.splice(3, 1, numberToReplace);
+console.log(replaceArrayNumber);
+
 /*✅ 30 JavaScript Array Exercises (from Beginner to Advanced)
 
 🟢 Beginner (1–10)
@@ -517,5 +576,3 @@ console.log(flatResult);
 
 30. Find the longest word in an array of strings.
 */
-
-[1, [2, 4], 6][1246];
