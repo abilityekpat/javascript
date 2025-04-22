@@ -374,13 +374,16 @@ const result = squareNumberArr.map(function (num) {
 });
 console.log(result);
 
-// let squareResult = [];
-// for (let squareNumberArray in squareNumberArr){
-//   let result = squareNumberArr[squareNumberArray] * squareNumberArr[squareNumberArray];
-//     squareResult.push(result);
-//   }
-// console.log(squareResult);
+//using the for loop
+let squareResult = [];
+for (let squareNumberArray in squareNumberArr) {
+  let result =
+    squareNumberArr[squareNumberArray] * squareNumberArr[squareNumberArray];
+  squareResult.push(result);
+}
+console.log(squareResult);
 
+//using the forEach loop
 // const squareNumberArr = [2, 5, 1, 6, 3, 9, 7, 11, 14, 12, 16, 15, 17, 4, 19, 8];
 // let squareResult = [];
 // squareNumberArr.forEach( (squareNumberArray) =>{
@@ -511,6 +514,22 @@ const numberToReplace = 11;
 replaceArrayNumber.splice(3, 1, numberToReplace);
 console.log(replaceArrayNumber);
 
+/*
+ * Chunk an array into smaller arrays of a specific size.
+ */
+const data = [1, 2, 3, 4, 5, 6, 7, 4, 9, 2];
+function chunkArray(arr, size) {
+  const result = [];
+  for (let i = 0; i < arr.length; i += size) {
+    result.push(arr.slice(i, i + size));
+  }
+  return result;
+}
+
+const chunked = chunkArray(data, 3);
+
+console.log(chunked);
+
 /*✅ 30 JavaScript Array Exercises (from Beginner to Advanced)
 
 🟢 Beginner (1–10)
@@ -576,3 +595,28 @@ console.log(replaceArrayNumber);
 
 30. Find the longest word in an array of strings.
 */
+
+const bills = [125, 555, 44];
+const calcTip = function (bill) {
+  if (bill >= 50 && bill <= 300) {
+    return bill * 0.15;
+  } else {
+    return bill * 0.2;
+  }
+};
+let mainResult = [];
+
+for (let TipResult = 0; TipResult <= bills.length - 1; TipResult++) {
+  let resultHolder = calcTip(bills[TipResult]);
+  mainResult.push(resultHolder);
+}
+
+console.log(mainResult);
+
+const jonasArray = {
+  firstName: "Jonas",
+  lastName: "John",
+  age: 32,
+  job: "teacher",
+  friends: ["favour", "Mary", "Prince", "Joe"],
+};
